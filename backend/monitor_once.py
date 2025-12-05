@@ -40,8 +40,18 @@ def send_sms(to_number, message):
             data=data,
             headers={"Authorization": f"Basic {auth_encoded}"}
         )
-        print(f"✓ Sent SMS to {to_number}: Status {response.status_code}")
-        return response.status_code == 200
+        
+        # Log detailed response for debugging
+        print(f"📱 SMS to {to_number}: Status {response.status_code}")
+        print(f"   Response: {response.text}")
+        
+        if response.status_code == 200:
+            print(f"   ✓ SMS sent successfully")
+            return True
+        else:
+            print(f"   ✗ Failed - Check Telerivet dashboard for details")
+            return False
+            
     except Exception as e:
         print(f"✗ Failed to send SMS to {to_number}: {e}")
         return False
