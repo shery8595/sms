@@ -45,7 +45,7 @@
                 "LEVEL": 647.7,
                 "U/SDISCHARGE": 150000.0,
                 "DEADLEVEL": 638.15,
-                "D/SDISCHARGE": 32892.0,
+                "D/SDISCHARGE": 150000.0,
                 "MEANINFLOW": 33223.0
             }
         },
@@ -55,3 +55,4 @@
     }
 
 ]
+
